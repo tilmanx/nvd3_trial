@@ -1,1 +1,28 @@
-index
+<h1>index</h1>
+
+
+<style>
+
+#chart_index svg {
+  height: 80px;
+}
+
+</style>
+
+
+<div id="chart_index">
+  <svg></svg>
+</div>
+
+<script type="text/javascript">
+  nv.addGraph(function() {
+  var chart = nv.models.bulletChart();
+
+  d3.select('#chart_index svg')
+      .datum(data)
+    .transition().duration(1000)
+      .call(chart);
+
+  return chart;
+});
+</script>
